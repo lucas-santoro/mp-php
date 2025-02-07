@@ -47,15 +47,15 @@ if (isset($_SESSION['user_id']))
     <div class="product">
         <h3>Produto 1</h3>
         <p>R$ 100,00</p>
-        <button onclick="window.location.href='<?php echo $userLoggedIn ? "backend/checkout.php?produto=1" : "login.html"; ?>'">
+        <button onclick="window.location.href='<?php echo $userLoggedIn ? "../backend/checkout.php?produto=1" : "login.html"; ?>'">
             Comprar
         </button>
     </div>
     <div class="product">
         <h3>Produto 2</h3>
         <p>R$ 200,00</p>
-        <button onclick="window.location.href='<?php echo $userLoggedIn ? "backend/checkout.php?produto=2" : "login.html"; ?>'">
-            Comprar
+        <button onclick="window.location.href='<?php echo $userLoggedIn ? "../backend/checkout.php?produto=2" : "login.html"; ?>'">
+        Comprar
         </button>
     </div>
 </div>
