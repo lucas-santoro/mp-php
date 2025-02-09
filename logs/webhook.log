@@ -1,0 +1,61 @@
+2025-02-07 01:13:35 - Recebido: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 01:13:35 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 01:16:12 - Recebido: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108264753","topic":"merchant_order"}
+2025-02-07 01:16:12 - IGNORADO: Notificação não é de pagamento. Dados: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108264753","topic":"merchant_order"}
+2025-02-07 01:16:12 - Recebido: {"resource":"101166376271","topic":"payment"}
+2025-02-07 01:16:12 - Recebido: {"action":"payment.created","api_version":"v1","data":{"id":"101166376271"},"date_created":"2025-02-07T00:16:12Z","id":119007266538,"live_mode":true,"type":"payment","user_id":"2251749414"}
+2025-02-07 01:16:12 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.created","api_version":"v1","data":{"id":"101166376271"},"date_created":"2025-02-07T00:16:12Z","id":119007266538,"live_mode":true,"type":"payment","user_id":"2251749414"}
+2025-02-07 01:16:13 - Recebido: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108264753","topic":"merchant_order"}
+2025-02-07 01:16:13 - IGNORADO: Notificação não é de pagamento. Dados: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108264753","topic":"merchant_order"}
+2025-02-07 01:17:23 - Recebido: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108324823","topic":"merchant_order"}
+2025-02-07 01:17:23 - IGNORADO: Notificação não é de pagamento. Dados: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108324823","topic":"merchant_order"}
+2025-02-07 01:17:24 - Recebido: {"resource":"101545768396","topic":"payment"}
+2025-02-07 01:17:24 - Recebido: {"action":"payment.created","api_version":"v1","data":{"id":"101545768396"},"date_created":"2025-02-07T00:17:23Z","id":119007298644,"live_mode":true,"type":"payment","user_id":"2251749414"}
+2025-02-07 01:17:24 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.created","api_version":"v1","data":{"id":"101545768396"},"date_created":"2025-02-07T00:17:23Z","id":119007298644,"live_mode":true,"type":"payment","user_id":"2251749414"}
+2025-02-07 01:17:24 - Recebido: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108324823","topic":"merchant_order"}
+2025-02-07 01:17:24 - IGNORADO: Notificação não é de pagamento. Dados: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108324823","topic":"merchant_order"}
+2025-02-07 01:23:19 - Recebido: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108612825","topic":"merchant_order"}
+2025-02-07 01:23:19 - IGNORADO: Notificação não é de pagamento. Dados: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108612825","topic":"merchant_order"}
+2025-02-07 01:23:19 - Recebido: {"action":"payment.created","api_version":"v1","data":{"id":"101166893989"},"date_created":"2025-02-07T00:23:19Z","id":119007510486,"live_mode":true,"type":"payment","user_id":"2251749414"}
+2025-02-07 01:23:19 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.created","api_version":"v1","data":{"id":"101166893989"},"date_created":"2025-02-07T00:23:19Z","id":119007510486,"live_mode":true,"type":"payment","user_id":"2251749414"}
+2025-02-07 01:23:19 - Recebido: {"resource":"101166893989","topic":"payment"}
+2025-02-07 01:23:20 - Recebido: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108612825","topic":"merchant_order"}
+2025-02-07 01:23:20 - IGNORADO: Notificação não é de pagamento. Dados: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28108612825","topic":"merchant_order"}
+2025-02-07 22:08:13 - Recebido: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:08:13 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:12:04 - Recebido: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28143148541","topic":"merchant_order"}
+2025-02-07 22:12:04 - IGNORADO: Notificação não é de pagamento. Dados: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28143148541","topic":"merchant_order"}
+2025-02-07 22:12:05 - Recebido: {"resource":"101640230312","topic":"payment"}
+2025-02-07 22:12:05 - Recebido: {"action":"payment.created","api_version":"v1","data":{"id":"101640230312"},"date_created":"2025-02-07T21:12:01Z","id":118968981123,"live_mode":true,"type":"payment","user_id":"2251749414"}
+2025-02-07 22:12:05 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.created","api_version":"v1","data":{"id":"101640230312"},"date_created":"2025-02-07T21:12:01Z","id":118968981123,"live_mode":true,"type":"payment","user_id":"2251749414"}
+2025-02-07 22:12:06 - Recebido: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28143148541","topic":"merchant_order"}
+2025-02-07 22:12:06 - IGNORADO: Notificação não é de pagamento. Dados: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28143148541","topic":"merchant_order"}
+2025-02-07 22:17:36 - Recebido: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:17:36 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:22:21 - Recebido: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28162255826","topic":"merchant_order"}
+2025-02-07 22:22:21 - IGNORADO: Notificação não é de pagamento. Dados: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28162255826","topic":"merchant_order"}
+2025-02-07 22:24:06 - Recebido: null
+2025-02-07 22:24:06 - IGNORADO: Notificação não é de pagamento. Dados: null
+2025-02-07 22:36:09 - Recebido: null
+2025-02-07 22:36:09 - IGNORADO: Notificação não é de pagamento. Dados: null
+2025-02-07 22:37:30 - Recebido: null
+2025-02-07 22:37:30 - IGNORADO: Notificação não é de pagamento. Dados: null
+2025-02-07 22:38:12 - Recebido: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28144452773","topic":"merchant_order"}
+2025-02-07 22:38:12 - IGNORADO: Notificação não é de pagamento. Dados: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28144452773","topic":"merchant_order"}
+2025-02-07 22:38:13 - Recebido: {"resource":"101643043906","topic":"payment"}
+2025-02-07 22:38:13 - Recebido: {"action":"payment.created","api_version":"v1","data":{"id":"101643043906"},"date_created":"2025-02-07T21:38:09Z","id":118969589779,"live_mode":true,"type":"payment","user_id":"2251749414"}
+2025-02-07 22:38:13 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.created","api_version":"v1","data":{"id":"101643043906"},"date_created":"2025-02-07T21:38:09Z","id":118969589779,"live_mode":true,"type":"payment","user_id":"2251749414"}
+2025-02-07 22:38:51 - Recebido: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28144452773","topic":"merchant_order"}
+2025-02-07 22:38:51 - IGNORADO: Notificação não é de pagamento. Dados: {"resource":"https:\/\/api.mercadolibre.com\/merchant_orders\/28144452773","topic":"merchant_order"}
+2025-02-07 22:52:43 - Recebido: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:52:43 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:57:52 - Recebido: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:57:52 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:57:58 - Recebido: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:57:58 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.updated","api_version":"v1","data":{"id":"123456"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:58:26 - Recebido: {"action":"payment.updated","api_version":"v1","data":{"id":"101643043906"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:58:26 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.updated","api_version":"v1","data":{"id":"101643043906"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:58:28 - Recebido: {"action":"payment.updated","api_version":"v1","data":{"id":"101643043906"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:58:28 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.updated","api_version":"v1","data":{"id":"101643043906"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:58:29 - Recebido: {"action":"payment.updated","api_version":"v1","data":{"id":"101643043906"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
+2025-02-07 22:58:29 - IGNORADO: Notificação não é de pagamento. Dados: {"action":"payment.updated","api_version":"v1","data":{"id":"101643043906"},"date_created":"2021-11-01T02:02:02Z","id":"123456","live_mode":false,"type":"payment","user_id":2251749414}
