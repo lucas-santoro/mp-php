@@ -38,30 +38,34 @@ $item = [
     "id" => "1234",
     "title" => $produto["nome"],
     "description" => "Dispositivo de loja de comércio eletrônico móvel",
-    "picture_url" => "https://www.google.com/url?sa=i&url=https%3A%2F%2Fborainvestir.b3.com.br%2Fobjetivos-financeiros%2Fdinheiro-esquecido-no-fgc-supera-r-100-milhoes-veja-se-voce-tem-valores-a-receber%2F&psig=AOvVaw0ihBDk8NlRoWoSO_ZrjOT6&ust=1738972391511000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJizoI-fsIsDFQAAAAAdAAAAABAE",
-    "category_id" => "eletronicos",
+    "picture_url" => "https://cdn.borainvestir.b3.com.br/2024/04/11113610/dinheiro-esquecido-fgc.webp",
     "quantity" => 1,
-    "currency_id" => "BRL"
+    "currency_id" => "BRL",
+    "unit_price" => $produto["preco"]
 ];
 
 
-$preference = $client->create([
-    "items" => [$item],
-    "external_reference" => (string) $_SESSION['user_id'],
-    "back_urls" => [
-        "success" => "http://localhost/mercado-pago/backend/status/success.php",
-        "failure" => "http://localhost/mercado-pago/backend/status/failure.php",
-        "pending" => "http://localhost/mercado-pago/backend/status/pending.php"
-    ],
-    "auto_return" => "approved",
-    "notification_url" => "https://2319-2804-7f1-eb03-64db-c0e1-ca27-a055-3418.ngrok-free.app/mercado-pago/backend/status/webhook.php",
-    // "payment_methods" => [
-    //     "excluded_payment_methods" => [
-    //         ["id" => "visa"] 
-    //     ],
-    //     "installments" => 6 
-    // ]
-]);
+try {
+    $preference = $client->create([
+        "items" => [$item],
+        "external_reference" => (string) $_SESSION['user_id'],
+        "back_urls" => [
+            "success" => "http://localhost/mercado-pago/backend/status/success.php",
+            "failure" => "http://localhost/mercado-pago/backend/status/failure.php",
+            "pending" => "http://localhost/mercado-pago/backend/status/pending.php"
+        ],
+        "auto_return" => "approved",
+        "notification_url" => "https://7b84-2804-7f1-eb03-64db-d44d-d7bd-211d-a78d.ngrok-free.app/mercado-pago/backend/status/webhook.php",
+    ]);
+} catch (\Exception $e) {
+    $errorMessage = $e->getMessage();
+    $errorTrace = json_encode($e->getTrace(), JSON_PRETTY_PRINT);
+
+    file_put_contents(__DIR__ . '/../logs/mp_api_error.log', date('Y-m-d H:i:s') . " - ERRO API: $errorMessage\nTRACE: $errorTrace\n", FILE_APPEND);
+
+    exit;
+}
+
 
 
 try {
