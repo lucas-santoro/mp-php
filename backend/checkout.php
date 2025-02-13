@@ -15,7 +15,7 @@ use MercadoPago\Client\Preference\PreferenceClient;
 $produtoId = $_GET['produto'] ?? null;
 
 $produtos = [
-    1 => ["nome" => "Produto 1", "preco" => 100.00],
+    1 => ["nome" => "Produto 1", "preco" => 1.00],
     2 => ["nome" => "Produto 2", "preco" => 200.00],
 ];
 
@@ -50,9 +50,9 @@ try {
         "items" => [$item],
         "external_reference" => (string) $_SESSION['user_id'],
         "back_urls" => [
-            "success" => "http://localhost/mercado-pago/backend/status/success.php",
-            "failure" => "http://localhost/mercado-pago/backend/status/failure.php",
-            "pending" => "http://localhost/mercado-pago/backend/status/pending.php"
+            "success" => "https://7b84-2804-7f1-eb03-64db-d44d-d7bd-211d-a78d.ngrok-free.app/mercado-pago/backend/status/success.php",
+            "failure" => "https://7b84-2804-7f1-eb03-64db-d44d-d7bd-211d-a78d.ngrok-free.app/mercado-pago/backend/status/failure.php",
+            "pending" => "https://7b84-2804-7f1-eb03-64db-d44d-d7bd-211d-a78d.ngrok-free.app/mercado-pago/backend/status/pending.php"
         ],
         "auto_return" => "approved",
         "notification_url" => "https://7b84-2804-7f1-eb03-64db-d44d-d7bd-211d-a78d.ngrok-free.app/mercado-pago/backend/status/webhook.php",
