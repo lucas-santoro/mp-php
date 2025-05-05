@@ -142,6 +142,37 @@ body {
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
 }
 
+.popular-badge {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 0.4rem 1.2rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-md);
+    z-index: 10;
+}
+
+.product.popular {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.02);
+    margin-top: 0;
+}
+
+.product.popular h3 {
+    margin-top: 2.5rem;
+}
+
+.product.popular::before {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
 .product:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
