@@ -24,7 +24,7 @@
                 <h1 class="register-title">Crie sua Conta</h1>
                 <p class="register-subtitle">Cadastre-se para ter acesso aos nossos produtos exclusivos</p>
                 
-                <form action="../backend/register.php" method="POST" class="register-form">
+                <form action="../backend/register.php" method="POST" class="register-form" id="registerForm">
                     <div class="input-group">
                         <input type="text" name="name" placeholder="Seu nome completo" required class="form-input">
                     </div>
@@ -32,9 +32,14 @@
                         <input type="email" name="email" placeholder="Seu e-mail" required class="form-input">
                     </div>
                     <div class="input-group">
-                        <input type="password" name="password" placeholder="Sua senha" required class="form-input">
+                        <input type="password" name="password" id="password" placeholder="Sua senha (mín. 6 caracteres)" required class="form-input" minlength="6">
+                        <div class="password-strength" id="passwordStrength"></div>
                     </div>
-                    <button type="submit" class="register-button">Criar Conta</button>
+                    <div class="input-group">
+                        <input type="password" name="confirm_password" id="confirmPassword" placeholder="Confirme sua senha" required class="form-input">
+                        <div class="password-match" id="passwordMatch"></div>
+                    </div>
+                    <button type="submit" class="register-button" id="submitBtn">Criar Conta</button>
                 </form>
                 
                 <div class="login-section">
@@ -44,5 +49,114 @@
             </div>
         </div>
     </main>
+    
+    <script>
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const passwordStrength = document.getElementById('passwordStrength');
+        const passwordMatch = document.getElementById('passwordMatch');
+        const submitBtn = document.getElementById('submitBtn');
+        const form = document.getElementById('registerForm');
+
+        // Verificar força da senha
+        passwordInput.addEventListener('input', function() {
+            const password = this.value;
+            let strength = 0;
+            let feedback = '';
+
+            if (password.length >= 6) strength++;
+            if (password.match(/[a-z]/)) strength++;
+            if (password.match(/[A-Z]/)) strength++;
+            if (password.match(/[0-9]/)) strength++;
+            if (password.match(/[^a-zA-Z0-9]/)) strength++;
+
+            switch(strength) {
+                case 0:
+                case 1:
+                    feedback = '⚠️ Senha muito fraca';
+                    passwordStrength.className = 'password-strength weak';
+                    break;
+                case 2:
+                    feedback = '🔒 Senha fraca';
+                    passwordStrength.className = 'password-strength medium';
+                    break;
+                case 3:
+                    feedback = '🛡️ Senha média';
+                    passwordStrength.className = 'password-strength medium';
+                    break;
+                case 4:
+                    feedback = '💪 Senha forte';
+                    passwordStrength.className = 'password-strength strong';
+                    break;
+                case 5:
+                    feedback = '🔐 Senha muito forte';
+                    passwordStrength.className = 'password-strength very-strong';
+                    break;
+            }
+
+            passwordStrength.textContent = feedback;
+            checkPasswordMatch();
+        });
+
+        // Verificar se as senhas coincidem
+        confirmPasswordInput.addEventListener('input', checkPasswordMatch);
+
+        function checkPasswordMatch() {
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            if (confirmPassword === '') {
+                passwordMatch.textContent = '';
+                passwordMatch.className = 'password-match';
+                return;
+            }
+
+            if (password === confirmPassword) {
+                passwordMatch.textContent = '✅ Senhas coincidem';
+                passwordMatch.className = 'password-match match';
+            } else {
+                passwordMatch.textContent = '❌ Senhas não coincidem';
+                passwordMatch.className = 'password-match no-match';
+            }
+
+            updateSubmitButton();
+        }
+
+        function updateSubmitButton() {
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+            const passwordsMatch = password === confirmPassword;
+            const passwordStrong = password.length >= 6;
+
+            if (passwordsMatch && passwordStrong && password !== '') {
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+            } else {
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.6';
+            }
+        }
+
+        // Prevenir envio se senhas não coincidem
+        form.addEventListener('submit', function(e) {
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            if (password !== confirmPassword) {
+                e.preventDefault();
+                alert('As senhas não coincidem!');
+                return false;
+            }
+
+            if (password.length < 6) {
+                e.preventDefault();
+                alert('A senha deve ter pelo menos 6 caracteres!');
+                return false;
+            }
+        });
+
+        // Inicializar estado do botão
+        updateSubmitButton();
+    </script>
 </body>
 </html>
