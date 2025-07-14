@@ -36,10 +36,8 @@ if (isset($_SESSION['user_id'])) {
         <h2>Minha Loja</h2>
         <div class="navbar-right">
             <?php if ($userLoggedIn): ?>
-                <span class="credits-badge">Créditos: R$ <?php echo number_format($credits, 2, ',', '.'); ?></span>
                 <a href="../backend/logout.php">Sair</a>
             <?php else: ?>
-                <span class="credits-badge">Créditos: R$ 0,00</span>
                 <a href="login.html">Login</a>
             <?php endif; ?>
         </div>
