@@ -50,12 +50,12 @@ try {
         "items" => [$item],
         "external_reference" => (string) $_SESSION['user_id'],
         "back_urls" => [
-            "success" => "https://7b84-2804-7f1-eb03-64db-d44d-d7bd-211d-a78d.ngrok-free.app/mercado-pago/backend/status/success.php",
-            "failure" => "https://7b84-2804-7f1-eb03-64db-d44d-d7bd-211d-a78d.ngrok-free.app/mercado-pago/backend/status/failure.php",
-            "pending" => "https://7b84-2804-7f1-eb03-64db-d44d-d7bd-211d-a78d.ngrok-free.app/mercado-pago/backend/status/pending.php"
+            "success" => "https://b52d-2804-7f1-eb03-64db-8c34-cb89-b3c6-86f9.ngrok-free.app/mercado-pago/backend/status/success.php",
+            "failure" => "https://b52d-2804-7f1-eb03-64db-8c34-cb89-b3c6-86f9.ngrok-free.app/mercado-pago/backend/status/failure.php",
+            "pending" => "https://b52d-2804-7f1-eb03-64db-8c34-cb89-b3c6-86f9.ngrok-free.app/mercado-pago/backend/status/pending.php"
         ],
         "auto_return" => "approved",
-        "notification_url" => "https://7b84-2804-7f1-eb03-64db-d44d-d7bd-211d-a78d.ngrok-free.app/mercado-pago/backend/status/webhook.php",
+        "notification_url" => "https://b52d-2804-7f1-eb03-64db-8c34-cb89-b3c6-86f9.ngrok-free.app/mercado-pago/backend/status/webhook.php",
     ]);
 } catch (\Exception $e) {
     $errorMessage = $e->getMessage();
@@ -66,15 +66,14 @@ try {
     exit;
 }
 
-
-
 try {
-    $stmt = $pdo->prepare("INSERT INTO transactions (user_id, produto_id, amount, status, payment_id) VALUES (:user_id, :produto_id, :amount, 'pending', :payment_id)");
+    $stmt = $pdo->prepare("INSERT INTO transactions (user_id, produto_id, amount, status, payment_id, preference_id) VALUES (:user_id, :produto_id, :amount, 'pending', :payment_id, :preference_id)");
     $stmt->execute([
         ':user_id' => $_SESSION['user_id'],
         ':produto_id' => $produtoId,
         ':amount' => $produto["preco"],
-        ':payment_id' => null
+        ':payment_id' => null,
+        ':preference_id' => $preference->id
     ]);
 } catch (PDOException $e) {
     die("Erro ao salvar transação: " . $e->getMessage());
