@@ -63,13 +63,25 @@ if (isset($_SESSION['user_id'])) {
                 </button>
             </div>
 
-            <div class="product">
+            <div class="product popular">
+                <div class="popular-badge">O mais popular</div>
                 <h3>Pacote de Créditos 2</h3>
+                <p class="product-description">Opção intermediária com ótimo custo-benefício para uso regular.</p>
+                <p class="product-price">R$ 150,00</p>
+                <button 
+                    class="buy-button <?php echo !$userLoggedIn ? 'login-prompt' : ''; ?>" 
+                    onclick="window.location.href='<?php echo $userLoggedIn ? "../backend/checkout.php?produto=2" : "login.html"; ?>'">
+                    <?php echo $userLoggedIn ? 'Comprar Agora' : 'Faça Login para Comprar'; ?>
+                </button>
+            </div>
+
+            <div class="product">
+                <h3>Pacote de Créditos 3</h3>
                 <p class="product-description">O melhor custo-benefício para usuários que buscam mais vantagens.</p>
                 <p class="product-price">R$ 200,00</p>
                 <button 
                     class="buy-button <?php echo !$userLoggedIn ? 'login-prompt' : ''; ?>" 
-                    onclick="window.location.href='<?php echo $userLoggedIn ? "../backend/checkout.php?produto=2" : "login.html"; ?>'">
+                    onclick="window.location.href='<?php echo $userLoggedIn ? "../backend/checkout.php?produto=3" : "login.html"; ?>'">
                     <?php echo $userLoggedIn ? 'Comprar Agora' : 'Faça Login para Comprar'; ?>
                 </button>
             </div>
