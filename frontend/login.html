@@ -3,18 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Minha Loja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/login.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="../backend/login.php" method="POST">
-            <input type="email" name="email" placeholder="E-mail" required>
-            <input type="password" name="password" placeholder="Senha" required>
-            <button type="submit" class="btn">Entrar</button>
-        </form>
-        <a href="register.html" class="register-link">Não tem uma conta? Cadastre-se</a>
-    </div>
+    <header class="navbar">
+        <h2>Minha Loja</h2>
+        <div class="navbar-right">
+            <a href="index.php">Voltar</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="login-section">
+            <div class="login-container">
+                <h1 class="login-title">Faça seu Login</h1>
+                <p class="login-subtitle">Entre na sua conta para acessar nossos produtos</p>
+                
+                <form action="../backend/login.php" method="POST" class="login-form">
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Seu e-mail" required class="form-input">
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Sua senha" required class="form-input">
+                    </div>
+                    <button type="submit" class="login-button">Entrar na Conta</button>
+                </form>
+                
+                <div class="register-section">
+                    <p class="register-text">Ainda não tem uma conta?</p>
+                    <a href="register.html" class="register-link">Cadastre-se aqui</a>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
