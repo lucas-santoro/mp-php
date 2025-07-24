@@ -165,6 +165,39 @@ body {
     color: var(--text-light);
 }
 
+.password-strength, .password-match {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0;
+    min-height: 1rem;
+    transition: all 0.3s ease;
+}
+
+.password-strength.weak {
+    color: #ef4444;
+}
+
+.password-strength.medium {
+    color: #f59e0b;
+}
+
+.password-strength.strong {
+    color: #10b981;
+}
+
+.password-strength.very-strong {
+    color: #059669;
+    font-weight: 600;
+}
+
+.password-match.match {
+    color: #10b981;
+}
+
+.password-match.no-match {
+    color: #ef4444;
+}
+
 .register-button {
     background: linear-gradient(135deg, var(--success-color) 0%, var(--accent-color) 100%);
     color: var(--white);
