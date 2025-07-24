@@ -3,19 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Cadastro - Minha Loja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/register.css">
 </head>
 <body>
-    <div class="register-container">
-        <h2>Cadastro</h2>
-        <form action="../backend/register.php" method="POST">
-            <input type="text" name="name" placeholder="Nome" required>
-            <input type="email" name="email" placeholder="E-mail" required>
-            <input type="password" name="password" placeholder="Senha" required>
-            <button type="submit" class="btn">Cadastrar</button>
-        </form>
-        <a href="login.html" class="login-link">Já tem uma conta? Faça login</a>
-    </div>
+    <header class="navbar">
+        <h2>Minha Loja</h2>
+        <div class="navbar-right">
+            <a href="index.php">Início</a>
+            <a href="login.html">Login</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="register-section">
+            <div class="register-container">
+                <h1 class="register-title">Crie sua Conta</h1>
+                <p class="register-subtitle">Cadastre-se para ter acesso aos nossos produtos exclusivos</p>
+                
+                <form action="../backend/register.php" method="POST" class="register-form">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Seu nome completo" required class="form-input">
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Seu e-mail" required class="form-input">
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Sua senha" required class="form-input">
+                    </div>
+                    <button type="submit" class="register-button">Criar Conta</button>
+                </form>
+                
+                <div class="login-section">
+                    <p class="login-text">Já tem uma conta?</p>
+                    <a href="login.html" class="login-link">Faça login aqui</a>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
